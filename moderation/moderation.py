@@ -424,7 +424,7 @@ class Moderation(commands.Cog):
 
         if member.edit(mute=True):
             raise commands.BadArgument(
-                f"Member is already muted and will be unmuted in {human_timedelta(member.timed_out_until)}."
+                f"Member is already muted and will be unmuted in {human_timedelta(duration.dt)}."
             )
         if reason is None:
             reason = "No reason was provided."
