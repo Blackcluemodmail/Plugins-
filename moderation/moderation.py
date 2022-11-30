@@ -422,7 +422,7 @@ class Moderation(commands.Cog):
         if dur_ts >= (3600 * 24 * 28):
             raise commands.BadArgument("Duration must be less than 28 days.")
 
-        if member.is_muted():
+        if member.edit(mute=True):
             raise commands.BadArgument(
                 f"Member is already muted and will be unmuted in {human_timedelta(member.timed_out_until)}."
             )
