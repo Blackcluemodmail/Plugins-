@@ -416,8 +416,11 @@ class Moderation(commands.Cog):
             raise commands.BadArgument("You cannot do this action on this user due to role hierarchy.")
         if not ctx.me.top_role > member.top_role:
             raise commands.BadArgument("This user is higher than me in role hierarchy.")
-        if not member.is_timed_out():
-            raise commands.BadArgument(f"{member} is not muted.")
+        dur_ts = duration.dt.timestamp() - duration.now.timestamp()
+        if dur_ts <= 0:
+            raise commands.BadArgument("Unable to parse the `duration` properly. Please try again.")
+        if dur_ts >= (3600 * 24 * 28):
+            raise commands.BadArgument("Duration must be less than 28 days.")
 
         if member.is_muted():
             raise commands.BadArgument(
