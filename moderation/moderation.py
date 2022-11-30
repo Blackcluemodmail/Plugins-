@@ -447,7 +447,7 @@ class Moderation(commands.Cog):
             description=f"`{member}` has been muted for **{human_delta}**.",
         )
         await asyncio.sleep(duration.dt)
-        reason = (f"Automatic voice mute made {duration.dt) ago")
+        reason = (f"Automatic voice mute made {duration.dt} ago")
         await member.edit(mute=False, reason=get_audit_reason(ctx.author, reason))
 
     # Warn command
