@@ -394,7 +394,7 @@ class Moderation(commands.Cog):
     async def voicemute(
         self,
         ctx: commands.Context,
-        member:discord.Member)
+        member:discord.Member,
         duration: UserFriendlyTime,
         *,
         reason: ActionReason = None,
