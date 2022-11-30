@@ -388,6 +388,68 @@ class Moderation(commands.Cog):
             description=f"`{member}` is now unmuted.",
         )
 
+    # Voice Mute Command
+    @commands.command()
+    @checks.has_permissions(PermissionLevel.MODERATOR)
+    async def voicemute(
+        self,
+        ctx: commands.Context,
+        member:discord.Member)
+        duration: UserFriendlyTime,
+        *,
+        reason: ActionReason = None,
+    ):
+        """
+        Mutes the specified member.
+
+        `member` may be a member ID, mention, or name.
+        `duration` may be a simple "human-readable" time text and without space.
+
+        Examples:
+        - `2m` or `2minutes` = 2 minutes
+        - `6h` or `6hours` = 6 hours
+        - `12h30m` = 12 hours 30 minutes
+
+        `reason` is optional.
+        """
+        if not can_execute_action(ctx, ctx.author, member):
+            raise commands.BadArgument("You cannot do this action on this user due to role hierarchy.")
+        if not ctx.me.top_role > member.top_role:
+            raise commands.BadArgument("This user is higher than me in role hierarchy.")
+        if not member.is_timed_out():
+            raise commands.BadArgument(f"{member} is not muted.")
+
+        if member.is_muted():
+            raise commands.BadArgument(
+                f"Member is already muted and will be unmuted in {human_timedelta(member.timed_out_until)}."
+            )
+        if reason is None:
+            reason = "No reason was provided."
+
+        human_delta = human_timedelta(duration.dt)
+
+        await member.edit(mute=True, reason=get_audit_reason(ctx.author, reason))
+
+        await ctx.send(
+            embed=discord.Embed(
+                title="Success",
+                description=f"`{member}` is now muted for **{human_delta}**.",
+                color=self.bot.main_color,
+            ).add_field(name="Reason", value=reason)
+        )
+        await self.logging.send_log(
+            guild=ctx.guild,
+            action=ctx.command.name,
+            duration=human_delta,
+            target=member,
+            moderator=ctx.author,
+            reason=reason,
+            description=f"`{member}` has been muted for **{human_delta}**.",
+        )
+        await asyncio.sleep(duration.dt)
+        reason = (f"Automatic voice mute made {duration.dt) ago")
+        await member.edit(mute=False, reason=get_audit_reason(ctx.author, reason))
+
     # Warn command
     @commands.command()
     @checks.has_permissions(PermissionLevel.MODERATOR)
