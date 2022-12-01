@@ -395,7 +395,7 @@ class Moderation(commands.Cog):
         self,
         ctx: commands.Context,
         member:discord.Member,
-        duration: Time,
+        duration: UserFriendlyTime,
         *,
         reason: ActionReason = None,
     ):
