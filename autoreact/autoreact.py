@@ -51,6 +51,14 @@ class Autoreact(commands.Cog):
     async def on_message(self, message):
         if message.author.bot:
             return
+        if message.content.lower is "ohio":
+            await message.add_reaction("5️⃣")
+
+
+    @commands.Cog.listener()
+    async def on_message(self, message):
+        if message.author.bot:
+            return
         for x in message.mentions:
             uid = await self.coll.find_one(
                 {"user_id": x.id}
@@ -59,9 +67,7 @@ class Autoreact(commands.Cog):
                 return
             reaction1 = uid["reaction"]
             await message.add_reaction(reaction1)
-        if message.content.lower is "ohio":
-            await message.add_reaction("5️⃣"
- 
+
     @commands.command()
     @checks.has_permissions(PermissionLevel.ADMIN)
     async def getars(self, ctx):
