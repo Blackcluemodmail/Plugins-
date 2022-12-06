@@ -22,7 +22,7 @@ class Autoreact(commands.Cog):
         if "ohio" in message.content.lower():
             await message.add_reaction("<a:AXHA:1006778596695744593>")
         if "667378631336525824" in message.content:
-            await message.add_reaction("<:emoji_21:1033650320636641310> <:emoji_22:1033650337053167646>") 
+            await message.add_reaction("<:emoji_21:1033650320636641310> , <:emoji_22:1033650337053167646>") 
         if "735018264651890689" in message.content:
            await message.add_reaction("<:emoji_35:1049663858874261545>")
         if "752152316596977704" in message.content:
