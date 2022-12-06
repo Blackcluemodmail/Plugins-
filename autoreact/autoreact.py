@@ -1,6 +1,5 @@
 import discord
 import typing
-import sleep
 
 from discord.ext import commands
 from core import checks
