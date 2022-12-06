@@ -27,7 +27,7 @@ class Autoreact(commands.Cog):
            await message.add_reaction("<:emoji_35:1049663858874261545>")
         if "752152316596977704" in message.content:
            await message.add_reaction("<:bc_o_carefree:984809639495479316>")
-        if "chad" or "860808338442158130" in message.content.lower():
+        if "chad" in message.content.lower():
            await message.add_reaction("<:bc_z_chadmove:976826985546395678>")
         if "851771484635398175" in message.content:
            await message.add_reaction("<:bc_o_worry_foff:979426649470799942>")
