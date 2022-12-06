@@ -49,7 +49,7 @@ class Autoreact(commands.Cog):
 
     @commands.cog.listener()
     async def on_message(self, message):
-        if message.author.bot
+        if message.author.bot:
             return
         if message.content.lower is "ohio":
             await message.add_reaction("5️⃣"
