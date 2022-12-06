@@ -61,7 +61,7 @@ class Autoreact(commands.Cog):
                 return
             reaction1 = uid["reaction"]
             await message.add_reaction(reaction1)
-        for "ohio" in message:
+        for ohio in message:
             await message.add_reaction("5️⃣")
 
     @commands.command()
