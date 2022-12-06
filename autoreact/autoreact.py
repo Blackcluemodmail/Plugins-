@@ -21,13 +21,12 @@ class Autoreact(commands.Cog):
             return
         if "ohio" in message.content.lower():
             await message.add_reaction("<a:AXHA:1006778596695744593>")
-
-        if message.content == "<@667378631336525824>":
+        if message.content.contains "<@667378631336525824>":
             await message.add_reaction("<:emoji_21:1033650320636641310>","<:emoji_22:1033650337053167646>" ) 
-            
-     
         if message.content == "<@736806099361202306>":
            await message.add_reaction("<:emoji_35:1049663858874261545>")
+        if message.content == "752152316596977704":
+           await message.add_reaction("<:bc_o_carefree:984809639495479316>")
 
 async def setup(bot):
     await bot.add_cog(Autoreact(bot))
