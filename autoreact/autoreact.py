@@ -25,7 +25,7 @@ class Autoreact(commands.Cog):
             await message.add_reaction("<:emoji_21:1033650320636641310>") 
         if message.content == "<@736806099361202306>":
            await message.add_reaction("<:emoji_35:1049663858874261545>")
-        if message.content == "752152316596977704":
+        if "752152316596977704" in message.content:
            await message.add_reaction("<:bc_o_carefree:984809639495479316>")
 
 async def setup(bot):
