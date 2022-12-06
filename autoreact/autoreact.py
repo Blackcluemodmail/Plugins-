@@ -23,7 +23,7 @@ class Autoreact(commands.Cog):
             await asyncio.sleep(0.5)
             await message.add_reaction("<a:AXHA:1006778596695744593>")
         if "667378631336525824" in message.content:
-            await bot.sleep(0.5) 
+            await ctx.sleep(0.5) 
             await message.add_reaction("<:emoji_22:1033650337053167646>" "<:emoji_21:1033650320636641310>") 
         if "735018264651890689" in message.content:
            await asyncio.sleep(0.5)
