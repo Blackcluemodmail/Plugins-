@@ -31,6 +31,7 @@ class Autoreact(commands.Cog):
            await message.add_reaction("<:bc_z_chadmove:976826985546395678>")
         if "851771484635398175" in message.content:
            await message.add_reaction("<:bc_o_worry_foff:979426649470799942>")
-
+        if "860808338442158130" in message.content:
+           await message.add_reaction("<:bc_z_chadmove:976826985546395678>") 
 async def setup(bot):
     await bot.add_cog(Autoreact(bot))
