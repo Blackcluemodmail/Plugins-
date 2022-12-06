@@ -23,8 +23,8 @@ class Autoreact(commands.Cog):
             await message.add_reaction("<a:AXHA:1006778596695744593>")
 
         if message.content == "<@667378631336525824>":
-            await message.add_reaction("<:emoji_21:1033650320636641310>") 
-            await message.add_reaction("<:emoji_22:1033650337053167646>") 
+            await message.add_reaction("<:emoji_21:1033650320636641310>","<:emoji_22:1033650337053167646>" ) 
+            
      
         if message.content == "<@736806099361202306>":
            await message.add_reaction("<:emoji_35:1049663858874261545>")
