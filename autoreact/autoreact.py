@@ -47,13 +47,6 @@ class Autoreact(commands.Cog):
         await self.coll.delete_one(ar)
         await ctx.send(f"Deleted reaction {reaction1} for {user.name}")
 
-    @commands.cog.listener()
-    async def on_message(self, message):
-        if message.author.bot:
-            return
-        if message.content.lower is "ohio":
-            await message.add_reaction("5️⃣"
-
     @commands.Cog.listener()
     async def on_message(self, message):
         if message.author.bot:
@@ -66,7 +59,9 @@ class Autoreact(commands.Cog):
                 return
             reaction1 = uid["reaction"]
             await message.add_reaction(reaction1)
-
+        if message.content.lower is "ohio":
+            await message.add_reaction("5️⃣"
+ 
     @commands.command()
     @checks.has_permissions(PermissionLevel.ADMIN)
     async def getars(self, ctx):
