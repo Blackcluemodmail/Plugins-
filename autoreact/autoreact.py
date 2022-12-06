@@ -61,8 +61,8 @@ class Autoreact(commands.Cog):
                 return
             reaction1 = uid["reaction"]
             await message.add_reaction(reaction1)
-        for ohio in message.content.lower:
-            await message.add_reaction("5️⃣")
+        if "ohio" in message.content.lower():
+            await message.add_reaction("😂")
 
     @commands.command()
     @checks.has_permissions(PermissionLevel.ADMIN)
