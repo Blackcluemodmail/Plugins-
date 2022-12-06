@@ -31,21 +31,6 @@ class Autoreact(commands.Cog):
         await self.coll.insert_one(ar)
         await ctx.send(f"Added reaction {emoji} for {member.mention}")
 
-    @commands.command()
-    @checks.has_permissions(PermissionLevel.ADMIN)
-    async def addarm(
-        self, ctx, message: word, emoji: typing.Union[discord.Emoji, str]
-    ):
-        """
-        Add a emoji reaction when a user is mentioned in a message.
-        """
-        check = await self.coll.find_one({"message": word})
-        if check:
-            return await ctx.send("The autoreact already exists for this user")
-        emoji1 = str(emoji)
-        ar = {"message": word, "reaction": emoji1}
-        await self.coll.insert_one(ar)
-        await ctx.send(f"Added reaction {emoji} for {word}")
 
     @commands.command()
     @checks.has_permissions(PermissionLevel.ADMIN)
@@ -61,6 +46,13 @@ class Autoreact(commands.Cog):
         reaction1 = ar["reaction"]
         await self.coll.delete_one(ar)
         await ctx.send(f"Deleted reaction {reaction1} for {user.name}")
+
+    @commands.cog.listener()
+    async def on_message(self, message):
+        if message.author.bot
+            return
+        if message.content.lower is "ohio":
+            await message.add_reaction("5️⃣"
 
     @commands.Cog.listener()
     async def on_message(self, message):
