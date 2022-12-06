@@ -24,10 +24,10 @@ class Autoreact(commands.Cog):
 
         if message.content == "<@667378631336525824>":
             await message.add_reaction("<:emoji_21:1033650320636641310>") 
-         #   await message.add_reaction("<:emoji_22:1033650337053167646>") 
+            await message.add_reaction("<:emoji_22:1033650337053167646>") 
      
-     #   if 735018264651890689 in message.content():
-     #      await message.add_reaction("<:emoji_35:1049663858874261545>")
+        if message.content == "<@736806099361202306>":
+           await message.add_reaction("<:emoji_35:1049663858874261545>")
 
 async def setup(bot):
     await bot.add_cog(Autoreact(bot))
