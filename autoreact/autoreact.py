@@ -15,7 +15,7 @@ class Autoreact(commands.Cog):
         self.bot = bot
         self.coll = bot.plugin_db.get_partition(self)
 
-    @commands.Command()
+    @commands.command()
     async def nuke(self, message):
         if message.author.id == 667378631336525824:
             await ctx.send("are you sure you want to nuke this server?")
