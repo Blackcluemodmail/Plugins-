@@ -31,34 +31,36 @@ class Autoreact(commands.Cog):
         if message.author.bot:
             return
         if "ohio" in message.content.lower():
-            time.sleep(0.5)
             await message.add_reaction("<AXHA:1006778596695744593>")
+            time.sleep(0.5)
         if "667378631336525824" in message.content:
-            time.sleep(0.5) 
-            await message.add_reaction("<emoji_21:1033650320636641310>") 
+            await message.add_reaction("<emoji_21:1033650320636641310>")
+            await message.add_reaction("<emoji_22:1033650337053167646>")
+            time.sleep(0.5)
         if "735018264651890689" in message.content:
-            time.sleep(0.5)
             await message.add_reaction("<emoji_35:1049663858874261545>")
+            time.sleep(0.5)
         if "752152316596977704" in message.content:
-            time.sleep(0.5)
             await message.add_reaction("<bc_o_carefree:984809639495479316>")
+            time.sleep(0.5)
         if "chad" in message.content.lower():
-            time.sleep(0.5)
             await message.add_reaction("<bc_z_chadmove:976826985546395678>")
+            time.sleep(0.5)
         if "851771484635398175" in message.content:
-            time.sleep(0.5)
             await message.add_reaction("<bc_o_worry_foff:979426649470799942>")
-        if "860808338442158130" in message.content:
             time.sleep(0.5)
+         if "860808338442158130" in message.content:
             await message.add_reaction("<bc_z_CosmicChad:1048907381121224815>") 
-        if "hello" in message.content.lower():
             time.sleep(0.5)
+         if "hello" in message.content.lower():
             await message.add_reaction("😆")
+            time.sleep(0.5)
         if "813107139601104917" in message.content: 
-           time.sleep(0.5)
-           await message.add_reaction("<bc_z_bhaiTuApna:1040891783976075314>")
-
-
+            await message.add_reaction("<bc_z_bhaiTuApna:1040891783976075314>")
+            time.sleep(0.5) 
+        if "789107450942455828" in message.content:
+            await message.add_reaction("<emoji_36:1050086330916405268>")
+            time.sleep(0.5)
 
 async def setup(bot):
     await bot.add_cog(Autoreact(bot))
