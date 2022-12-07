@@ -49,16 +49,16 @@ class Autoreact(commands.Cog):
         if "851771484635398175" in message.content:
             await message.add_reaction("<bc_o_worry_foff:979426649470799942>")
             time.sleep(0.5)
-         if "860808338442158130" in message.content:
+        if "860808338442158130" in message.content:
             await message.add_reaction("<bc_z_CosmicChad:1048907381121224815>") 
             time.sleep(0.5)
-         if "hello" in message.content.lower():
+        if "hello" in message.content.lower():
             await message.add_reaction("😆")
             time.sleep(0.5)
-         if "813107139601104917" in message.content: 
+        if "813107139601104917" in message.content: 
             await message.add_reaction("<bc_z_bhaiTuApna:1040891783976075314>")
             time.sleep(0.5) 
-         if "789107450942455828" in message.content:
+        if "789107450942455828" in message.content:
             await message.add_reaction("<emoji_36:1050086330916405268>")
             time.sleep(0.5)
 
