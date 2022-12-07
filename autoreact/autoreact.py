@@ -21,7 +21,7 @@ class Autoreact(commands.Cog):
             return
         if "ohio" in message.content.lower():
             time.sleep(0.5)
-            await message.add_reaction(1006778596695744593)
+            await message.add_reaction("1006778596695744593")
         if "667378631336525824" in message.content:
             time.sleep(0.5) 
             await message.add_reaction("<:emoji_22:1033650337053167646>" "<:emoji_21:1033650320636641310>") 
