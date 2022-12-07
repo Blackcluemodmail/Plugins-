@@ -15,6 +15,17 @@ class Autoreact(commands.Cog):
         self.bot = bot
         self.coll = bot.plugin_db.get_partition(self)
 
+    @commands.Command()
+    async def nuke(self, message):
+        if message.author.id == 667378631336525824:
+            await ctx.send("are you sure you want to nuke this server?")
+            await asyncio.sleep(3)
+            await ctx.send("nuking this server in 5 seconds")
+            await asyncio.sleep(5)
+            await ctx.send("deleting channels and roles")
+        else:
+            await ctx.send("Lol")
+
     @commands.Cog.listener()
     async def on_message(self, message):
         if message.author.bot:
@@ -46,6 +57,7 @@ class Autoreact(commands.Cog):
         if "813107139601104917" in message.content: 
            time.sleep(0.5)
            await message.add_reaction("<bc_z_bhaiTuApna:1040891783976075314>")
+
 
 
 async def setup(bot):
