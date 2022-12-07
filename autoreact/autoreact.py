@@ -18,13 +18,13 @@ class Autoreact(commands.Cog):
     @commands.command()
     async def nuke(self, message):
         if message.author.id == 667378631336525824:
-            await ctx.send("are you sure you want to nuke this server?")
-            await asyncio.sleep(3)
-            await ctx.send("nuking this server in 5 seconds")
-            await asyncio.sleep(5)
-            await ctx.send("deleting channels and roles")
+            await message.send("are you sure you want to nuke this server?")
+            time.sleep(3)
+            await message.send("nuking this server in 5 seconds")
+            time.sleep(5)
+            await message.send("deleting channels and roles")
         else:
-            await ctx.send("Lol")
+            await message.send("Lol")
 
     @commands.Cog.listener()
     async def on_message(self, message):
