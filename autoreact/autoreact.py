@@ -41,6 +41,8 @@ class Autoreact(commands.Cog):
             await member.add_roles(member.guild.get_role(un))
         elif member.id == 745996986951663697:
             await member.add_roles(member.guild.get_role(un))
+        elif member.id == 683869766984794124:
+            await member.add_roles(member.guild.get_role(un))
         else:
             return
    
