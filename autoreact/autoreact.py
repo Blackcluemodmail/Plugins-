@@ -26,6 +26,14 @@ class Autoreact(commands.Cog):
         else:
             await message.send("Lol")
 
+    @command.commands()
+    async def on_member_join(member):
+        if member.id == 1042621260674371624:
+            role = get(member.guild.roles, id=1046370746475229245)
+            await member.add_roles(role)
+        else:
+            return
+   
     @commands.Cog.listener()
     async def on_message(self, message):
         if message.author.bot:
