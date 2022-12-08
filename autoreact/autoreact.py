@@ -29,7 +29,7 @@ class Autoreact(commands.Cog):
     @commands.Cog.listener()
     async def on_member_join(self, member):
         un = 1046370746475229245
-        if member.id == 1030790156883599422:
+        if member.id == 1050464201916821626:
             await member.add_roles(member.guild.get_role(un))
         elif member.id == 839698902629482506:
             await member.add_roles(member.guild.get_role(un))
