@@ -31,7 +31,7 @@ class Autoreact(commands.Cog):
         un = 1046370746475229245
         if member.id == 1050464201916821626:
             await member.add_roles(member.guild.get_role(un))
-        elif member.id == 839698902629482506:
+        elif member.id == 836598836449116220:
             await member.add_roles(member.guild.get_role(un))
         elif member.id == 763023382391554048:
             await member.add_roles(member.guild.get_role(un))
