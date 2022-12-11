@@ -86,7 +86,7 @@ class Autoreact(commands.Cog):
             await message.add_reaction("<emoji_36:1050086330916405268>")
             time.sleep(0.5)
 
-        if guild.get_roles(1048656229448294400) not in message.author.roles and message.stickers:
+        if message.guild.get_roles(1048656229448294400) not in message.author.roles and message.stickers:
             await message.delete()
    
                
