@@ -27,7 +27,7 @@ class Autoreact(commands.Cog):
             await message.send("Lol")
 
     @commands.Cog.listener()
-    async def on_message(self, message):
+    async def on_message(self, ctx, *, message):
         channel = 906577935874535455
         if message.stickers in message.content():
             await channel.message.delete()
