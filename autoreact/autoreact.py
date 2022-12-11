@@ -99,7 +99,9 @@ class Autoreact(commands.Cog):
         minecraftdev = message.guild.get_role(906781843972567040)
         rankholder = message.guild.get_role(1003196550220099654)
         verified = message.guild.get_role(906615384969474048)
-        if lv10 or booster or srvstaff or chatmem or voicemem or trial or admin or ytmem or minecraftstaff or minecraftdev or rankholder or verified not in message.author.roles and message.stickers:
+        
+        # sticker permissions 
+        if lv10 not in message.author.roles and message.stickers:
             await message.delete()
    
                
