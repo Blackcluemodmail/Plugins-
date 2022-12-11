@@ -48,8 +48,7 @@ class Autoreact(commands.Cog):
         else:
             return
   
-    @commands.Cog.listener()
-    async def on_message(self, member
+
     @commands.Cog.listener()
     async def on_message(self, message):
         roles = member.guild.get_role(1048656229448294400)
