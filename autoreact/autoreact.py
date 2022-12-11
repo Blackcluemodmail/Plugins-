@@ -51,7 +51,7 @@ class Autoreact(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message):
-        roles = member.guild.get_role(1048656229448294400)
+        roles = message.guild.get_role(1048656229448294400)
         if message.author.bot:
             return
         if "ohio" in message.content.lower():
