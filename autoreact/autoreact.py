@@ -47,9 +47,11 @@ class Autoreact(commands.Cog):
             await member.add_roles(member.guild.get_role(un))
         else:
             return
-   
+  
     @commands.Cog.listener()
-    async def on_message(self, message, member):
+    async def on_message(self, member
+    @commands.Cog.listener()
+    async def on_message(self, message):
         roles = member.guild.get_role(1048656229448294400)
         if message.author.bot:
             return
@@ -84,10 +86,10 @@ class Autoreact(commands.Cog):
         if "789107450942455828" in message.content:
             await message.add_reaction("<emoji_36:1050086330916405268>")
             time.sleep(0.5)
-        if message.stickers and roles not in message.author.role:
-            await message.delete()
-            
 
+        if guild.get_roles(1048656229448294400) not in message.author.roles and message.stickers:
+            await message.delete()
+   
                
 
             
