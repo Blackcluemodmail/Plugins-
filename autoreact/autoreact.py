@@ -103,15 +103,15 @@ class Autoreact(commands.Cog):
         # sticker permissions 
         if lv10 not in message.author.roles and message.stickers:
             await message.delete()
-        elif booster not in message.author.roles and message.stickers:
+        if booster not in message.author.roles and message.stickers:
             await message.delete()
-        elif srvstaff not in message.author.roles and message.stickers:
+        if srvstaff not in message.author.roles and message.stickers:
             await message.delete()
-        elif chatmem not in message.author.roles and message.stickers:
+        if chatmem not in message.author.roles and message.stickers:
             await message.delete()
-        elif voicemem not in message.author.roles and message.stickers:
+        if voicemem not in message.author.roles and message.stickers:
             await message.delete()
-        elif trial not in message.author.roles and message.stickers:
+        if trial not in message.author.roles and message.stickers:
             await message.delete()
            
         
