@@ -83,7 +83,7 @@ class Autoreact(commands.Cog):
         if "789107450942455828" in message.content:
             await message.add_reaction("<emoji_36:1050086330916405268>")
             time.sleep(0.5)
-        if message.stickers == message.content:
+        if message.content == message.stickers:
             await message.add_reaction("😂")
 
             
