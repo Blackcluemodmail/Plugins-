@@ -27,6 +27,11 @@ class Autoreact(commands.Cog):
             await message.send("Lol")
 
     @commands.Cog.listener()
+    async def on_message(self, message):
+        if message.sticker == message.content():
+            await message.delete()
+            
+    @commands.Cog.listener()
     async def on_member_join(self, member):
         un = 1046370746475229245
         if member.id == 1050464201916821626:
