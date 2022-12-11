@@ -85,8 +85,21 @@ class Autoreact(commands.Cog):
         if "789107450942455828" in message.content:
             await message.add_reaction("<emoji_36:1050086330916405268>")
             time.sleep(0.5)
-
-        if message.guild.get_role(1048656229448294400) not in message.author.roles and message.stickers:
+        
+        # roles for sticker permissions
+        lv10 = message.guild.get_role(906660899480272936)
+        booster = message.guild.get_role(632529654812770325)
+        srvstaff = message.guild.get_role(906618549370503168)
+        chatmem = message.guild.get_role(938677457442205757)
+        voicemem = message.guild.get_role(938677488438104134)
+        trial = message.guild.get_role(907868778321301545)
+        admin = message.guild.get_role(668774420583677983)
+        ytmem = message.guild.get_role(740849706204397598)
+        minecraftstaff = message.guild.get_role(906782010033438802)
+        minecraftdev = message.guild.get_role(906781843972567040)
+        rankholder = message.guild.get_role(1003196550220099654)
+        verified = message.guild.get_role(906615384969474048)
+        if lv10 or booster or srvstaff or chatmem or voicemem or trial or admin or ytmem or minecraftstaff or minecraftdev or rankholder or verified not in message.author.roles and message.stickers:
             await message.delete()
    
                
