@@ -83,8 +83,8 @@ class Autoreact(commands.Cog):
         if "789107450942455828" in message.content:
             await message.add_reaction("<emoji_36:1050086330916405268>")
             time.sleep(0.5)
-        if message.stickeritem in message.content():
-            await message.delete(message.stickers)
+        if message.stickers in message.content():
+            await message.add_reaction("😂)
 
             
 async def setup(bot):
