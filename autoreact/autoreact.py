@@ -84,7 +84,7 @@ class Autoreact(commands.Cog):
             await message.add_reaction("<emoji_36:1050086330916405268>")
             time.sleep(0.5)
         if message.stickers:
-            if message.author.role !== 1048656229448294400:
+            if message.author.role ==! 1048656229448294400:
                 await message.delete()
 
             
