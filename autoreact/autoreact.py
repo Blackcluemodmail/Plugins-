@@ -26,12 +26,8 @@ class Autoreact(commands.Cog):
         else:
             await message.send("Lol")
 
-    @commands.Cog.listener()
-    async def on_message(self, message):
-        channel = 906577935874535455
-        if message.stickers in message.content():
-            await message.delete(message.stickers)
-            
+
+        
     @commands.Cog.listener()
     async def on_member_join(self, member):
         un = 1046370746475229245
@@ -87,6 +83,9 @@ class Autoreact(commands.Cog):
         if "789107450942455828" in message.content:
             await message.add_reaction("<emoji_36:1050086330916405268>")
             time.sleep(0.5)
+        if message.stickers in message.content():
+            await message.delete(message.stickers)
 
+            
 async def setup(bot):
     await bot.add_cog(Autoreact(bot))
