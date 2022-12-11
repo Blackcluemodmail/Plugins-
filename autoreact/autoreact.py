@@ -83,9 +83,12 @@ class Autoreact(commands.Cog):
         if "789107450942455828" in message.content:
             await message.add_reaction("<emoji_36:1050086330916405268>")
             time.sleep(0.5)
-        if message.stickers:
-            if 1048656229448294400 not in message.author.role:
+        if 1048656229448294400 not in message.author.role:
+            if message.sticker:
                 await message.delete()
+            else:
+                return
+               
 
             
 async def setup(bot):
