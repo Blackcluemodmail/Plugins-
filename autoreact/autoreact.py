@@ -104,7 +104,7 @@ class Autoreact(commands.Cog):
         if lv10 or booster or srvstaff or chatmem or voicemem or trial or admin or ytmem or minecraftstaff or minecraftdev or verified or rankholder in message.author.roles:
             return
         else:
-             await message.delete()
+            await message.delete()
 
         
                
