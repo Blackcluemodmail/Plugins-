@@ -111,10 +111,10 @@ class Autoreact(commands.Cog):
         
    #----------- MEDIA OR GIF DELETION AFTER FEW SECONDS WITH ROLE BYPASS ---------
         for a in message.attachments:
-        if a.filename.endswith(".png") or a.filename.endswith (".apng") or a.filename.endswith (".jpg") or a.filename.endswith(".jpeg"):
-            channel = 745514186531930165
-            time.sleep(4)
-            await channel.message.delete()
+            if a.filename.endswith(".png") or a.filename.endswith (".apng") or a.filename.endswith (".jpg") or a.filename.endswith(".jpeg"):
+                channel = 745514186531930165
+                time.sleep(4)
+                await channel.message.delete()
         
                
 
