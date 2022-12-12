@@ -108,8 +108,9 @@ class Autoreact(commands.Cog):
    
             else:
                 await message.delete()
-
-
+        else:
+            return
+      
 
         
                
