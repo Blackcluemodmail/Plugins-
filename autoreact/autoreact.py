@@ -109,7 +109,7 @@ class Autoreact(commands.Cog):
                 return
    # -------------------------------
         
-   #----------- MEDIA OR GIF DELETION AFTER FEW SECONDS WITH ROLE BYPASS ---------
+   #----------- MEDIA DELETION AFTER FEW SECONDS WITH ROLE BYPASS ---------
       #  testrole = message.guild.get_role(873039799777361972) # role from dank memer server
       #  testrole2 = message.guild.get_role(770694204720283718) # role 2
         manager = message.guild.get_role(906618549370503168)
@@ -121,7 +121,17 @@ class Autoreact(commands.Cog):
                     await message.delete()
                 else:
                     return
-               
+   # ----------------------------
+
+  # ------------ GIF DELETION AFTER A FEW SECONDS WITH ROLE BYPASS -------
+        lv90 = message.guild.get_role(1051063310071644170)
+        if message.content == tenor.com and lv90 not in message.author.roles:
+            await message.send(f"{message.author.mention} That link is not allowed!", delete_after=10)
+            await message.delete()
+        if message.content == tenor.com and lv90 in message.author.roles:
+            time.sleep(30)
+            await message.delete()
+
 
             
 async def setup(bot):
