@@ -27,28 +27,29 @@ class Autoreact(commands.Cog):
             await message.send("Lol")
 
 
-        
-    @commands.Cog.listener()
-    async def on_member_join(self, member):
-        un = 1046370746475229245
-        if member.id == 1050464201916821626:
-            await member.add_roles(member.guild.get_role(un))
-        elif member.id == 836598836449116220:
-            await member.add_roles(member.guild.get_role(un))
-        elif member.id == 763023382391554048:
-            await member.add_roles(member.guild.get_role(un))
-        elif member.id == 700238768657006602:
-            await member.add_roles(member.guild.get_role(un))
-        elif member.id == 972889240872566904:
-            await member.add_roles(member.guild.get_role(un))
-        elif member.id == 745996986951663697:
-            await member.add_roles(member.guild.get_role(un))
-        elif member.id == 683869766984794124:
-            await member.add_roles(member.guild.get_role(un))
-        else:
-            return
-  
+  # --------- BLACKLISTING A MEMBER FROM SERVER -------     
+ #   @commands.Cog.listener()
+ #   async def on_member_join(self, member):
+ #       un = 1046370746475229245 # THIS ROLE HAS NO PERMISSIONS IN ANY CHANNEL
+  #     if member.id == 1050464201916821626:
+  #          await member.add_roles(member.guild.get_role(un))
+  #      elif member.id == 836598836449116220:
+  #          await member.add_roles(member.guild.get_role(un))
+  #      elif member.id == 763023382391554048:
+   #         await member.add_roles(member.guild.get_role(un))
+   #     elif member.id == 700238768657006602:
+   #         await member.add_roles(member.guild.get_role(un))
+   #     elif member.id == 972889240872566904:
+   #         await member.add_roles(member.guild.get_role(un))
+   #     elif member.id == 745996986951663697:
+    #        await member.add_roles(member.guild.get_role(un))
+   #     elif member.id == 683869766984794124:
+    #        await member.add_roles(member.guild.get_role(un))
+     #   else:
+      #      return
+  # -------------------------------
 
+  #--------- Auto React --------
     @commands.Cog.listener()
     async def on_message(self, message):
         roles = message.guild.get_role(1048656229448294400)
@@ -85,8 +86,9 @@ class Autoreact(commands.Cog):
         if "789107450942455828" in message.content:
             await message.add_reaction("<emoji_36:1050086330916405268>")
             time.sleep(0.5)
-        
-        # roles for sticker permissions
+    # ----_-_----_-_-------------------
+    
+    # ----- Sticker Permissions --------
         lv10 = message.guild.get_role(906660899480272936)
         booster = message.guild.get_role(632529654812770325)
         srvstaff = message.guild.get_role(911126348372774912)
@@ -100,15 +102,17 @@ class Autoreact(commands.Cog):
         rankholder = message.guild.get_role(1003196550220099654)
         verified = message.guild.get_role(906615384969474048)
         
-        # sticker permissions
-
-        
         if message.stickers:
             if lv10 not in message.author.roles and booster not in message.author.roles and srvstaff not in message.author.roles and chatmem not in message.author.roles and voicemem not in message.author.roles and trial not in message.author.roles and admin not in message.author.roles and ytmem not in message.author.roles and minecraftstaff not in message.author.roles and minecraftdev not in message.author.roles and verified != message.author.roles and rankholder != message.author.roles:
                 await message.delete()
             else:
                 return
-         
+   # -------------------------------
+        
+   #----------- MEDIA OR GIF DELETION AFTER FEW SECONDS WITH ROLE BYPASS ---------
+        if message.content.lower().endswith(".png, .apng, .jpg, .jpeg"):
+            time.sleep(4)
+            await message.delete()
         
                
 
