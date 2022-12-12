@@ -102,12 +102,12 @@ class Autoreact(commands.Cog):
         
         # sticker permissions
 
-        if message.stickers:
-            if lv10 == message.author.roles or booster == message.author.roles or srvstaff == message.author.roles or chatmem == message.author.roles or voicemem == message.author.roles or trial == message.author.roles or admin == message.author.roles or ytmem == message.author.roles or minecraftstaff == message.author.roles or minecraftdev == message.author.roles or verified == message.author.roles or rankholder == message.author.roles:
-                return
-   
-            else:
+        
+        if lv10 != message.author.roles or booster != message.author.roles or srvstaff != message.author.roles or chatmem != message.author.roles or voicemem != message.author.roles or trial != message.author.roles or admin != message.author.roles or ytmem != message.author.roles or minecraftstaff != message.author.roles or minecraftdev != message.author.roles or verified != message.author.roles or rankholder != message.author.roles:
+            if message.stickers:
                 await message.delete()
+            else:
+                return
         else:
             return
       
