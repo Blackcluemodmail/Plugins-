@@ -114,7 +114,7 @@ class Autoreact(commands.Cog):
             if a.filename.endswith(".png") or a.filename.endswith (".apng") or a.filename.endswith (".jpg") or a.filename.endswith(".jpeg"):
                 channel = 745514186531930165
                 time.sleep(4)
-                await channel.message.delete()
+                await message.channel.delete()
         
                
 
