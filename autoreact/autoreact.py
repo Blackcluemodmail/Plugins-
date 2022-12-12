@@ -52,7 +52,7 @@ class Autoreact(commands.Cog):
   #--------- Auto React --------
     @commands.Cog.listener()
     async def on_message(self, message):
-        roles = message.guild.get_role(1048656229448294400)
+        
         if message.author.bot:
             return
         if "ohio" in message.content.lower():
