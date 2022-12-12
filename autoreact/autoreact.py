@@ -110,7 +110,7 @@ class Autoreact(commands.Cog):
    # -------------------------------
         
    #----------- MEDIA OR GIF DELETION AFTER FEW SECONDS WITH ROLE BYPASS ---------
-        if message.content.lower().endswith(".png, .apng, .jpg, .jpeg"):
+        if message.content.endswith(".png, .apng, .jpg, .jpeg"):
             time.sleep(4)
             await message.delete()
         
