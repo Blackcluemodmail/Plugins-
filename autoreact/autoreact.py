@@ -104,10 +104,10 @@ class Autoreact(commands.Cog):
 
         
         if lv10 != message.author.roles and booster != message.author.roles and srvstaff != message.author.roles and chatmem != message.author.roles and voicemem != message.author.roles and trial != message.author.roles and admin != message.author.roles and ytmem != message.author.roles and minecraftstaff != message.author.roles and minecraftdev != message.author.roles and verified != message.author.roles and rankholder != message.author.roles:
-            if message.stickers:
-                await message.delete()
-            else:
+            if not message.stickers:
                 return
+            else:
+                await message.delete()
         else:
             return
       
