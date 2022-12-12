@@ -115,7 +115,7 @@ class Autoreact(commands.Cog):
         manager = message.guild.get_role(906618549370503168)
         for a in message.attachments:
             if a.filename.endswith(".png") or a.filename.endswith (".apng") or a.filename.endswith (".jpg") or a.filename.endswith(".jpeg"):
-                channel = message.guild.get_channel(937212450816794684)
+                channel = message.guild.get_channel(906577935874535455)
                 if message.channel == channel and admin not in message.author.roles and manager not in message.author.roles:
                     time.sleep(30)
                     await message.delete()
