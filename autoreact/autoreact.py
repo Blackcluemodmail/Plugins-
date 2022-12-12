@@ -104,11 +104,12 @@ class Autoreact(commands.Cog):
 
         
         if message.stickers:
-            if lv10 != message.author.roles and booster != message.author.roles and srvstaff != message.author.roles and chatmem != message.author.roles and voicemem != message.author.roles and trial != message.author.roles and admin != message.author.roles and ytmem != message.author.roles and minecraftstaff != message.author.roles and minecraftdev != message.author.roles and verified != message.author.roles and rankholder != message.author.roles:
-                await message.delete()
+            if lv10 == message.author.roles or booster == message.author.roles or srvstaff == message.author.roles or chatmem == message.author.roles or voicemem == message.author.roles or trial == message.author.roles or admin == message.author.roles or ytmem == message.author.roles or minecraftstaff == message.author.roles or minecraftdev == message.author.roles or verified == message.author.roles or rankholder == message.author.roles:
+                return
             else:
-                if lv10 == message.author.roles or booster == message.author.roles or srvstaff == message.author.roles or chatmem == message.author.roles or voicemem == message.author.roles or trial == message.author.roles or admin == message.author.roles or ytmem == message.author.roles or minecraftstaff == message.author.roles or minecraftdev == message.author.roles or verified == message.author.roles or rankholder == message.author.roles:
-                    return
+                if lv10 != message.author.roles and booster != message.author.roles and srvstaff != message.author.roles and chatmem != message.author.roles and voicemem != message.author.roles and trial != message.author.roles and admin != message.author.roles and ytmem != message.author.roles and minecraftstaff != message.author.roles and minecraftdev != message.author.roles and verified != message.author.roles and rankholder != message.author.roles:
+                    await message.delete()
+         
         
                
 
