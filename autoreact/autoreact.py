@@ -113,7 +113,7 @@ class Autoreact(commands.Cog):
         if message.attachment.endswith(".png") or message.attachment.endswith (".apng") or message.attachment.endswith (".jpg") or message.attachment.endswith(".jpeg"):
             channel = 745514186531930165
             time.sleep(4)
-            await message.channel.delete()
+            await channel.message.delete()
         
                
 
