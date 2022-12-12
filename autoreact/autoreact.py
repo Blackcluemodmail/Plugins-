@@ -110,15 +110,17 @@ class Autoreact(commands.Cog):
    # -------------------------------
         
    #----------- MEDIA OR GIF DELETION AFTER FEW SECONDS WITH ROLE BYPASS ---------
-        testrole = message.guild.get_role(873039799777361972) # role from dank memer server
-        testrole2 = message.guild.get_role(770694204720283718) # role 2
+      #  testrole = message.guild.get_role(873039799777361972) # role from dank memer server
+      #  testrole2 = message.guild.get_role(770694204720283718) # role 2
+        manager = message.guild.get_role(906618549370503168)
         for a in message.attachments:
             if a.filename.endswith(".png") or a.filename.endswith (".apng") or a.filename.endswith (".jpg") or a.filename.endswith(".jpeg"):
                 channel = message.guild.get_channel(937212450816794684)
-                if message.channel == channel and testrole not in message.author.roles and testrole2 not in message.author.roles:
-                    time.sleep(4)
+                if message.channel == channel and admin not in message.author.roles and manager not in message.author.roles:
+                    time.sleep(30)
                     await message.delete()
-        
+                else:
+                    return
                
 
             
