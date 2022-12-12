@@ -89,7 +89,7 @@ class Autoreact(commands.Cog):
         # roles for sticker permissions
         lv10 = message.guild.get_role(906660899480272936)
         booster = message.guild.get_role(632529654812770325)
-        srvstaff = message.guild.get_role(906618549370503168)
+        srvstaff = message.guild.get_role(911126348372774912)
         chatmem = message.guild.get_role(938677457442205757)
         voicemem = message.guild.get_role(938677488438104134)
         trial = message.guild.get_role(907868778321301545)
