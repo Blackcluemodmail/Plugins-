@@ -113,7 +113,7 @@ class Autoreact(commands.Cog):
         for a in message.attachments:
             if a.filename.endswith(".png") or a.filename.endswith (".apng") or a.filename.endswith (".jpg") or a.filename.endswith(".jpeg"):
                 channel = message.guild.get_channel(937212450816794684)
-                    if channel == message.channel
+                    if message.channel == channel:
                         time.sleep(4)
                         await message.delete()
         
