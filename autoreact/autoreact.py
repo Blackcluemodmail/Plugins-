@@ -105,7 +105,7 @@ class Autoreact(commands.Cog):
        #     else:
         #        return
            
-        if stk in message.content:
+        if stk in message.stickers:
             await message.channel.send(f"{message.author.mention}, That Sticker Is Not Allowed!",delete_after=5)
             await message.delete()
    # -------------------------------
