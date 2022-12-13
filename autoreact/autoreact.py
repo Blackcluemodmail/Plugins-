@@ -104,6 +104,10 @@ class Autoreact(commands.Cog):
                 await message.delete()
             else:
                 return
+            
+        if "ekdum dead server" in message.sticker:
+            await message.channel.send(f"{message.author.mention}, That Sticker Is Not Allowed!",delete_after=5)
+            await message.delete()
    # -------------------------------
         
    #----------- MEDIA DELETION AFTER FEW SECONDS WITH ROLE BYPASS ---------
@@ -131,7 +135,7 @@ class Autoreact(commands.Cog):
             if lv90 in message.author.roles:
                 time.sleep(30)
                 await message.delete()
-
+       
 
             
 async def setup(bot):
