@@ -105,7 +105,7 @@ class Autoreact(commands.Cog):
             else:
                 return
             
-        if message.stickers is "ekdum dead server":
+        if message.stickers == "ekdum dead server":
             await message.channel.send(f"{message.author.mention}, That Sticker Is Not Allowed!",delete_after=5)
             await message.delete()
    # -------------------------------
