@@ -11,10 +11,10 @@ class FunCommands(commands.Cog):
         self.db = self.bot.plugin_db.get_partition(self)
 
 
-        @checks.has_permissions(PermissionLevel.MODERATOR)
-        @commands.command()
-        async def feed(self, ctx, member:discord.Member = None):
-            feedGIF = [    
+    @checks.has_permissions(PermissionLevel.MODERATOR)
+    @commands.command()
+    async def feed(self, ctx, member:discord.Member = None):
+        feedGIF = [    
             "https://i.imgur.com/1vC0R20.gif",
             "https://data.whicdn.com/images/81561319/original.gif",
             "https://thumbs.gfycat.com/EagerSpectacularHoverfly-max-14mb.gif",
@@ -22,29 +22,29 @@ class FunCommands(commands.Cog):
             "https://i.pinimg.com/originals/7a/cb/20/7acb209c594f42e0d56b87d70421c85d.gif",
                ]  
 
-            if (member == ctx.author or member == None):
-                feedSelfResponse = [
+        if (member == ctx.author or member == None):
+            feedSelfResponse = [
                 f"{ctx.author.mention} feeds them selves. So eating?",
                 f"{ctx.author.mention} feeds themselves yum!",
                 f"{ctx.author.mention} is feeding their hungry stomach",
                 f"{ctx.author.mention} is being fed by... themselves",
                  ]
-                feed = random.choice(feedSelfResponse)
-                embed = discord.Embed(color=0x9b59b6)
-                embed.set_image(url=random.choice(feedGIF))
-                embed.add_field(name="Feed", value=(feed))
-                await ctx.send(embed=embed)
-            else:
-                feedResponse = [ 
-                f"{ctx.author.mention} feeds {member.mention}",
-                f"{member.mention} is being feed by {ctx.author.mention}. Open wide!",
-                f"Yum! {ctx.author.mention} feeds {member.mention}. Here comes the airplane!",    
-                ]  
-                feed = random.choice(feedResponse)
-                embed = discord.Embed(color=0x9b59b6)
-                embed.set_image(url=random.choice(feedGIF))
-                embed.add_field(name="Feed", value=(feed))
-                await ctx.send(embed=embed)
+            feed = random.choice(feedSelfResponse)
+            embed = discord.Embed(color=0x9b59b6)
+            embed.set_image(url=random.choice(feedGIF))
+            embed.add_field(name="Feed", value=(feed))
+            await ctx.send(embed=embed)
+        else:
+            feedResponse = [ 
+            f"{ctx.author.mention} feeds {member.mention}",
+            f"{member.mention} is being feed by {ctx.author.mention}. Open wide!",
+            f"Yum! {ctx.author.mention} feeds {member.mention}. Here comes the airplane!",    
+              ]  
+            feed = random.choice(feedResponse)
+            embed = discord.Embed(color=0x9b59b6)
+            embed.set_image(url=random.choice(feedGIF))
+            embed.add_field(name="Feed", value=(feed))
+            await ctx.send(embed=embed)
 
 async def setup(bot):
     await bot.add_cog(FunCommands(bot))
