@@ -53,7 +53,7 @@ class FunCommands(commands.Cog):
         embed = discord.Embed(color=0x9b59b6)
         embed.set_image(url="https://images-ext-1.discordapp.net/external/H6c31dPQac4Keuzmwf5heM6mMMFGJU_tgqeF96T0PjU/https/media.tenor.com/images/01e6b4a18d1e4d5f375d421da3cf7ea1/tenor.gif")
         embed.add_field(name="TBan", value=(bmention)
-        embed.set_footer(text = "FunCommands~~")
+        embed.set_footer(text = "Fun Commands~~")
         await ctx.send(embed=embed)
 
 async def setup(bot):
