@@ -105,7 +105,7 @@ class Autoreact(commands.Cog):
        #     else:
         #        return
            
-        if "950684924246130708" == message.stickers.name:
+        if "950684924246130708" == message.stickers:
             await message.channel.send(f"{message.author.mention}, That Sticker Is Not Allowed!",delete_after=5)
             await message.delete()
    # -------------------------------
