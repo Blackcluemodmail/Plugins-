@@ -57,15 +57,15 @@ class FunCommands(commands.Cog):
             bmention = f"{ctx.author.mention} has been banned from **{ctx.author.guild}**"
             embed = discord.Embed(color=0x9b59b6)
             embed.set_image(url="https://images-ext-1.discordapp.net/external/H6c31dPQac4Keuzmwf5heM6mMMFGJU_tgqeF96T0PjU/https/media.tenor.com/images/01e6b4a18d1e4d5f375d421da3cf7ea1/tenor.gif")
-            embed.add_field(name="", value=(bmention))
-            embed.set_footer(text = "Fun Commands.lol~~")
+            embed.add_field(name="Fun Commands", value=(bmention))
+            embed.set_footer(text = f"Ban from {ctx.author.mention}")
             await ctx.send(embed=embed)
         else:
             bmention = f"{member.mention} has been banned from **{member.guild}**"
             embed = discord.Embed(color=0x9b59b6)
             embed.set_image(url="https://images-ext-1.discordapp.net/external/H6c31dPQac4Keuzmwf5heM6mMMFGJU_tgqeF96T0PjU/https/media.tenor.com/images/01e6b4a18d1e4d5f375d421da3cf7ea1/tenor.gif")
-            embed.add_field(name="", value=(bmention))
-            embed.set_footer(text = "Fun Commands.lol~~")
+            embed.add_field(name="Fun Commands", value=(bmention))
+            embed.set_footer(text = f"Ban from {ctx.author.mention}")
             await ctx.send(embed=embed)
 async def setup(bot):
     await bot.add_cog(FunCommands(bot))
