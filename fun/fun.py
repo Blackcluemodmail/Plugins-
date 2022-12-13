@@ -3,6 +3,7 @@ from discord.ext import commands
 from core import checks
 from core.models import PermissionLevel
 import random
+import time
 
 class FunCommands(commands.Cog):
     """Fun commands for members to use!!"""
@@ -53,7 +54,7 @@ class FunCommands(commands.Cog):
         Bans a member from discord server!
         (fun command)
         """
-        await ctx.message.delete(delete_after=30)
+      
         if member == None:
             bmention = f"{ctx.author.mention} has been banned from **{ctx.author.guild}**"
             embed = discord.Embed(color=0x9b59b6)
@@ -68,5 +69,7 @@ class FunCommands(commands.Cog):
             embed.add_field(name="Fun Commands", value=(bmention))
             embed.set_footer(text = f"Ban from {ctx.author}")
             await ctx.send(embed=embed, delete_after=30)
+            time.sleep(30)
+            await ctx.message.delete()
 async def setup(bot):
     await bot.add_cog(FunCommands(bot))
