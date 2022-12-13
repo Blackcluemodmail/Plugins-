@@ -52,7 +52,7 @@ class Autoreact(commands.Cog):
   #--------- Auto React --------
     @commands.Cog.listener()
     async def on_message(self, message):
-        stk = discord.utils.get(950684924246130708)
+        stk = discord.utils.get("950684924246130708")
         if message.author.bot:
             return
         if "ohio" in message.content.lower():
@@ -105,7 +105,7 @@ class Autoreact(commands.Cog):
        #     else:
         #        return
            
-        if "950684924246130708" in message.content:
+        if stk in message.content:
             await message.channel.send(f"{message.author.mention}, That Sticker Is Not Allowed!",delete_after=5)
             await message.delete()
    # -------------------------------
