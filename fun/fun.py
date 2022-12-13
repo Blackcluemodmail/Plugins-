@@ -46,5 +46,15 @@ class FunCommands(commands.Cog):
             embed.add_field(name="Feed", value=(feed))
             await ctx.send(embed=embed)
 
+    @checks.has_permissions(PermissionLevel.MODERATOR)
+    @commands.command()
+    async def tban(self, ctx, member:discord.Member = None):
+        bmention = f"{member.mention} has been banned from **{member.guild}**"
+        embed = discord.embed(color=0x9b59b6)
+        embed.set_image(url="https://images-ext-1.discordapp.net/external/H6c31dPQac4Keuzmwf5heM6mMMFGJU_tgqeF96T0PjU/https/media.tenor.com/images/01e6b4a18d1e4d5f375d421da3cf7ea1/tenor.gif")
+        embed.add_field(name="TBan", value=(bmention)
+        embed.set_footer("FunCommands ~~")
+        await ctx.send(embed=embed)
+
 async def setup(bot):
     await bot.add_cog(FunCommands(bot))
