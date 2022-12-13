@@ -50,11 +50,12 @@ class FunCommands(commands.Cog):
     @checks.has_permissions(PermissionLevel.MODERATOR)
     @commands.command()
     async def tban(self, ctx, member:discord.Member = None):
+        
         """ 
         Bans a member from discord server!
         (fun command)
         """
-      
+        await ctx.message.delete()
         if member == None:
             bmention = f"{ctx.author.mention} has been banned from **{ctx.author.guild}**"
             embed = discord.Embed(color=0x9b59b6)
@@ -69,7 +70,6 @@ class FunCommands(commands.Cog):
             embed.add_field(name="Fun Commands", value=(bmention))
             embed.set_footer(text = f"Ban from {ctx.author}")
             await ctx.send(embed=embed, delete_after=30)
-            time.sleep(30)
-            await ctx.message.delete()
+
 async def setup(bot):
     await bot.add_cog(FunCommands(bot))
