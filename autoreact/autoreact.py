@@ -159,7 +159,6 @@ class Autoreact(commands.Cog):
                       "Amount : {amount}\n"
                       "Purchase type : {purchase}\n"
               )
-            await
         if purchase == amethyst.lower():
             purchase = member.guild.get_role(1034474426902794321)
             await member.add_roles(purchase)
