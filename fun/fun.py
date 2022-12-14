@@ -73,19 +73,12 @@ class FunCommands(commands.Cog):
 
     @checks.has_permissions(PermissionLevel.MODERATOR)
     @commands.command()
-    async def ranklog(self, ctx, member: discord.Member, *, gamertag = None, purchase = None , amount = None):
+    async def ranklog(self, ctx, member: discord.Member, gamertag = None, purchase = None , amount = None):
         """
         logs smp ranks
         """
         channel = ctx.guild.get_channel(960482007379497040)
-        if member == None:
-            await ctx.send_help(ctx.command)
-        elif amount == None:
-            await ctx.send("Please enter the amount")
-        elif purchase == None: 
-            await ctx.send("Please enter the rank name")
-        elif gamertag == None:
-            await ctx.send("Please enter the gamertag")
+        await ctx.send("Please enter the gamertag")
         
         embed = discord.Embed(title="Rank Purchase",
                 color=self.bot.main_color,
