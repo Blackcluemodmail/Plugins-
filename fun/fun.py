@@ -92,13 +92,83 @@ class FunCommands(commands.Cog):
         embed.set_footer(text="Fun Plugin v1.0")
 
         await channel.send(embed=embed) 
-        amethyst = "amethyst"         
+        amethyst = "amethyst" 
+        ruby = "ruby"
+        obsidian = "obsidian"
+        carneline = "carneline"
+        epidote = "epidote"
+        amazonite = "amazonite"
+        smprank = member.guild.get_role(1003196550220099654)       
         if purchase == amethyst.lower():                 
             purchase = member.guild.get_role(1034474426902794321)
             await member.add_roles(purchase)
-            time.sleep(30)
+            await member.add_roles(smprank)
+            embed = discord.Embed(
+                    description = (f" Successfully added {purchase.mention} to {member.mention} for 30 days\n"
+                                  f" Successfully added {smprank.mention} to {member.mention} for 30days\n"))
+            await channel.send(
+            time.sleep(2592000)
             await member.remove_roles(purchase)
-                  
-        
+            await member.remove_roles(smprank)
+        elif purchase == ruby.lower():                 
+            purchase = member.guild.get_role(1034474078754570353)
+            await member.add_roles(purchase)
+            await member.add_roles(smprank)
+            embed = discord.Embed(
+                    description = (f" Successfully added {purchase.mention} to {member.mention} for 30 days\n"
+                                  f" Successfully added {smprank.mention} to {member.mention} for 30days\n"))
+            await channel.send(embed=embed)
+            time.sleep(2592000)
+            await member.remove_roles(purchase)
+            await member.remove_roles(smprank)
+        elif purchase == obsidian.lower():                 
+            purchase = member.guild.get_role(1034474068998631454)
+            await member.add_roles(purchase)
+            await member.add_roles(smprank)            embed = discord.Embed(
+                    description = (f" Successfully added {purchase.mention} to {member.mention} for 30 days\n"
+                                  f" Successfully added {smprank.mention} to {member.mention} for 30days\n"))
+            await channel.send(embed=embed)
+            time.sleep(2592000)
+            await member.remove_roles(purchase)
+            await member.remove_roles(smprank)            
+        elif purchase == epidote.lower():                 
+            purchase = member.guild.get_role(1034474059645329481)
+            await member.add_roles(purchase)
+            await member.add_roles(smprank)
+                    embed = discord.Embed(
+                    description = (f" Successfully added {purchase.mention} to {member.mention} for 30 days\n"
+                                  f" Successfully added {smprank.mention} to {member.mention} for 30days\n"))
+            await channel.send(embed=embed)
+            time.sleep(2592000)
+            await member.remove_roles(purchase)
+            await member.remove_roles(smprank)
+        elif purchase == carneline.lower():                 
+            purchase = member.guild.get_role(1034473986211467271)
+            await member.add_roles(purchase)
+            await member.add_roles(smprank)
+            embed = discord.Embed(
+                    description = (f" Successfully added {purchase.mention} to {member.mention} for 30 days\n"
+                                  f" Successfully added {smprank.mention} to {member.mention} for 30days\n"))
+            await channel.send(embed=embed)
+            time.sleep(2592000)
+            await member.remove_roles(purchase)
+            await member.remove_roles(smprank)
+        elif purchase == amazonite.lower():                 
+            purchase = member.guild.get_role(1034473906863607889)
+            await member.add_roles(purchase)
+            await member.add_roles(smprank)
+            embed = discord.Embed(
+                    description = (f" Successfully added {purchase.mention} to {member.mention} for 30 days\n"
+                                  f" Successfully added {smprank.mention} to {member.mention} for 30days\n"))
+            await channel.send(embed=embed)
+            time.sleep(2592000)
+            await member.remove_roles(purchase)
+            await member.remove_roles(smprank)                  
+        else:
+            embed = discord.Embed(
+                    description = (
+                       f"Couldn’t add roles to the {member.mention} due to incorrect log format!\n"
+                       f"Please give them roles manially"))
+            await channel.send(embed=embed)
 async def setup(bot):
     await bot.add_cog(FunCommands(bot))
