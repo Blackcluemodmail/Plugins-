@@ -77,7 +77,8 @@ class FunCommands(commands.Cog):
         """
         logs smp ranks
         """
-        await ctx.send_help(ctx.command)
+        if member == None:
+            await ctx.send_help(ctx.command)
         channel = member.guild.get_channel(960482007379497040) 
         embed = discord.Embed(title="Rank Purchase",
                 color=self.bot.main_color,
