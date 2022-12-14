@@ -52,7 +52,6 @@ class Autoreact(commands.Cog):
   #--------- Auto React --------
     @commands.Cog.listener()
     async def on_message(self, message):
-        stk = message.guild.fetch_sticker(950684924246130708)
         if message.author.bot:
             return
         if "ohio" in message.content.lower():
