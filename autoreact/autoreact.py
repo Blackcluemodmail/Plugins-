@@ -153,12 +153,12 @@ class Autoreact(commands.Cog):
         embed = discord.Embed(title="Rank Purchase",
                 color=self.bot.main_color,
                 description = (
-                    f"Discord Tag : {ctx.member.mention}\n
-                      Discord User ID : {ctx.member.id}\n
-                      Gamer Tag : {gamertag}\n
-                      Amount : {amount}\n
-                      Purchase type : {purchase}\n
-                         ")
+                    f"Discord Tag : {ctx.member.mention}\n"
+                      "Discord User ID : {ctx.member.id}\n"
+                      "Gamer Tag : {gamertag}\n"
+                      "Amount : {amount}\n"
+                      "Purchase type : {purchase}\n"
+                         )
         await ctx.chan.send(embed=embed)
         if purchase == amethyst.lower():
             purchase = member.guild.get_role(1034474426902794321)
