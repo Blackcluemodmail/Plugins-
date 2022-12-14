@@ -157,8 +157,8 @@ class Autoreact(commands.Cog):
                       "Discord User ID : {ctx.member.id}\n"
                       "Gamer Tag : {gamertag}\n"
                       "Amount : {amount}\n"
-                      "Purchase type : {purchase}\n"
-              )
+                      "Purchase type : {purchase}\n")
+             await ctx.channel.send(embed=embed)
         if purchase == amethyst.lower():
             purchase = member.guild.get_role(1034474426902794321)
             await member.add_roles(purchase)
