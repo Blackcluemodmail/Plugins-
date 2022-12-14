@@ -83,14 +83,14 @@ class FunCommands(commands.Cog):
                 color=self.bot.main_color,
                 description =(
                     f"Discord Tag : {member.mention}\n"
-                     f"Discord User ID : {member}\n"
+                     f"Discord User ID : {member.id}\n"
                      f"Gamer Tag : {gamertag}\n"
                      f"Amount : {amount}\n"
                      f"Purchase type : {purchase}\n")
                 )
         embed.set_footer(text="Fun Plugin v1.0")
 
-        await ctx.channel.send(embed=embed) 
+        await channel.send(embed=embed) 
         amethyst = "amethyst"         
         if purchase == amethyst.lower():                 
             purchase = member.guild.get_role(1034474426902794321)
