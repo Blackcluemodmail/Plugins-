@@ -179,7 +179,7 @@ class FunCommands(commands.Cog):
         admin = message.guild.get_role(781054661901156372)
         gc = message.guild.get_channel(892689877517365268)
         if message.channel == gc and admin not in message.author.roles and manager not in message.author.roles:
-            if "!!help" or "<@892768539612696597> help" in message.content:
+            if "!!help" in message.content or "<@892768539612696597> help" in message.content:
                 await message.author.delete()
           
                 
