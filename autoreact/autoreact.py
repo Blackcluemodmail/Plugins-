@@ -140,10 +140,10 @@ class Autoreact(commands.Cog):
         """
         logs smp ranks
         """
-        channel = member.guild.fetch_channel(960482007379497040)
+        channel = member.guild.get_channel(960482007379497040)
         
         if member == None:
-            await ctx.send_help(ctx. command)
+            await ctx.send_help(ctx.command)
         if amount == None:
             await ctx.send("Please enter the amount")
         if purchase == None: 
