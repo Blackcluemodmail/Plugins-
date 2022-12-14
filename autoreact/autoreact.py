@@ -165,7 +165,8 @@ class Autoreact(commands.Cog):
             time.sleep(30)
             await member.remove_roles(purchase)
                   
-                      
+       
+                              
                               
 
             
