@@ -90,8 +90,8 @@ class FunCommands(commands.Cog):
         embed = discord.Embed(title="Rank Purchase",
                 color=self.bot.main_color,
                 description =(
-                    f"Discord Tag : {ctx.member.mention}\n"
-                      "Discord User ID : {ctx.member.id}\n"
+                    f"Discord Tag : {member.mention}\n"
+                      "Discord User ID : {member.id}\n"
                       "Gamer Tag : {gamertag}\n"
                       "Amount : {amount}\n"
                       "Purchase type : {purchase}\n")
