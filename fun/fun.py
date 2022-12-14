@@ -73,11 +73,11 @@ class FunCommands(commands.Cog):
 
     @checks.has_permissions(PermissionLevel.MODERATOR)
     @commands.command()
-    async def ranklog(self, ctx, member: discord.Member, gamertag, purchase, amount):
+    async def ranklog(self, ctx, member: discord.Member, *, gamertag, purchase, amount):
         """
         logs smp ranks
         """
-        channel = member.guild.get_channel(960482007379497040)
+        channel = ctx.guild.get_channel(960482007379497040)
         if member == None:
             await ctx.send_help(ctx.command)
         elif amount == None:
@@ -91,14 +91,15 @@ class FunCommands(commands.Cog):
                 color=self.bot.main_color,
                 description =(
                     f"Discord Tag : {member.mention}\n"
-                      "Discord User ID : {member.id}\n"
-                      "Gamer Tag : {gamertag}\n"
-                      "Amount : {amount}\n"
-                      "Purchase type : {purchase}\n")
+                     "Discord User ID : {member.id}\n"
+                     "Gamer Tag : {gamertag}\n"
+                     "Amount : {amount}\n"
+                     "Purchase type : {purchase}\n")
                 )
         embed.set_footer(text="Fun Plugin v1.0")
 
-        await ctx.channel.send(embed=embed)                     
+        await ctx.channel.send(embed=embed) 
+        amethyst = "amethyst"         
         if purchase == amethyst.lower():                 
             purchase = member.guild.get_role(1034474426902794321)
             await member.add_roles(purchase)
