@@ -77,9 +77,8 @@ class FunCommands(commands.Cog):
         """
         logs smp ranks
         """
-        channel = ctx.guild.get_channel(960482007379497040)
-        await ctx.send("Please enter the gamertag")
-        
+        await ctx.send(ctx.command)
+        channel = member.guild.get_channel(960482007379497040) 
         embed = discord.Embed(title="Rank Purchase",
                 color=self.bot.main_color,
                 description =(
