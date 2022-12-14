@@ -174,14 +174,15 @@ class FunCommands(commands.Cog):
             await channel.send(embed=embed)
             
     @commands.Cog.listener()
-    async def on_message(self, message, ctx):
+    async def on_message(self, message):
         manager = message.guild.get_role(781054364525395979)
         admin = message.guild.get_role(781054661901156372)
         gc = message.guild.get_channel(892689877517365268)
-        if "!!help" or "<@892768539612696597> help" in message.content:
-            if message.channel == gc and admin not in message.author.roles and manager not in message.author.roles:
+        if message.channel == gc and admin not in message.author.roles and manager not in message.author.roles:
+            if "!!help" or "<@892768539612696597> help" in message.content:
                 await message.delete()
-                await message.delete(ctx.command)
+          
+                
                 
             
             
