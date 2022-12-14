@@ -133,7 +133,41 @@ class Autoreact(commands.Cog):
             if lv90 in message.author.roles:
                 time.sleep(30)
                 await message.delete()
-       
+           
+    @checks.has_permissions(PermissionLevel.MODERATOR)
+    @commands.command()
+    async def ranklog(self, ctx, member: discord.Member, gamertag, purchase, *, amount):
+        """
+        logs smp ranks
+        """
+        chan = member.guild.fetch_channel(960482007379497040)
+        
+        if member == None:
+            await ctx.send_help(ctx. command)
+        if amount == None:
+            await ctx.send("Please enter the amount")
+        if purchase == None: 
+            await ctx.send("Please enter the rank name")
+        if gamertag == None:
+            await ctx.send("Please enter the gamertag")
+        embed = discord.Embed(title="Rank Purchase",
+                color=self.bot.main_color,
+                description = (
+                    f"Discord Tag : {ctx.member.mention}\n
+                      Discord User ID : {ctx.member.id}\n
+                      Gamer Tag : {gamertag}\n
+                      Amount : {amount}\n
+                      Purchase type : {purchase}\n
+                         ")
+        await ctx.chan.send(embed=embed)
+        if purchase == amethyst.lower():
+            purchase = member.guild.get_role(1034474426902794321)
+            await member.add_roles(purchase)
+            time.sleep(30)
+            await member.remove_roles(purchase)
+                  
+                      
+                              
 
             
 async def setup(bot):
