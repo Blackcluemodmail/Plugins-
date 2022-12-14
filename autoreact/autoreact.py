@@ -140,7 +140,7 @@ class Autoreact(commands.Cog):
         """
         logs smp ranks
         """
-        chan = member.guild.fetch_channel(960482007379497040)
+        channel = member.guild.fetch_channel(960482007379497040)
         
         if member == None:
             await ctx.send_help(ctx. command)
@@ -159,12 +159,12 @@ class Autoreact(commands.Cog):
                       "Amount : {amount}\n"
                       "Purchase type : {purchase}\n"
                          )
-        await ctx.chan.send(embed=embed)
-        if purchase == amethyst.lower():
-            purchase = member.guild.get_role(1034474426902794321)
-            await member.add_roles(purchase)
-            time.sleep(30)
-            await member.remove_roles(purchase)
+       await ctx.channel.send(embed=embed)
+       if purchase == amethyst.lower():
+           purchase = member.guild.get_role(1034474426902794321)
+           await member.add_roles(purchase)
+           time.sleep(30)
+           await member.remove_roles(purchase)
                   
                       
                               
