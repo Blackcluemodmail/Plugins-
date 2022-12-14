@@ -89,12 +89,13 @@ class FunCommands(commands.Cog):
         
         embed = discord.Embed(title="Rank Purchase",
                 color=self.bot.main_color,
-                description = (
+                description =(
                     f"Discord Tag : {ctx.member.mention}\n"
                       "Discord User ID : {ctx.member.id}\n"
                       "Gamer Tag : {gamertag}\n"
                       "Amount : {amount}\n"
                       "Purchase type : {purchase}\n")
+                )
         embed.set_footer(text="Fun Plugin v1.0")
 
         await ctx.channel.send(embed=embed)                     
