@@ -73,7 +73,7 @@ class FunCommands(commands.Cog):
 
     @checks.has_permissions(PermissionLevel.MODERATOR)
     @commands.command()
-    async def ranklog(self, ctx, member: discord.Member, *, gamertag, purchase, amount):
+    async def ranklog(self, ctx, member: discord.Member, *, gamertag = None, purchase = None , amount = None):
         """
         logs smp ranks
         """
