@@ -158,7 +158,7 @@ class Autoreact(commands.Cog):
                       "Gamer Tag : {gamertag}\n"
                       "Amount : {amount}\n"
                       "Purchase type : {purchase}\n")
-        sd = await ctx.channel.send(embed=embed)
+        
                               
         if purchase == amethyst.lower():
                               
@@ -167,7 +167,7 @@ class Autoreact(commands.Cog):
             time.sleep(30)
             await member.remove_roles(purchase)
                   
-
+        await ctx.channel.send(embed=embed)
                              
                               
 
