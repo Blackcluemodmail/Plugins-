@@ -141,7 +141,6 @@ class Autoreact(commands.Cog):
         logs smp ranks
         """
         channel = member.guild.get_channel(960482007379497040)
-        
         if member == None:
             await ctx.send_help(ctx.command)
         if amount == None:
@@ -150,8 +149,6 @@ class Autoreact(commands.Cog):
             await ctx.send("Please enter the rank name")
         if gamertag == None:
             await ctx.send("Please enter the gamertag")
-            
-            
         embed = discord.Embed(title="Rank Purchase",
                 color=self.bot.main_color,
                 description = (
@@ -161,8 +158,6 @@ class Autoreact(commands.Cog):
                       "Amount : {amount}\n"
                       "Purchase type : {purchase}\n"
               )
-                         
-                              
         await ctx.channel.send(embed=embed)
         if purchase == amethyst.lower():
             purchase = member.guild.get_role(1034474426902794321)
