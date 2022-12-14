@@ -77,16 +77,16 @@ class FunCommands(commands.Cog):
         """
         logs smp ranks
         """
-        await ctx.send(ctx.command)
+        await ctx.send_help(ctx.command)
         channel = member.guild.get_channel(960482007379497040) 
         embed = discord.Embed(title="Rank Purchase",
                 color=self.bot.main_color,
                 description =(
                     f"Discord Tag : {member.mention}\n"
-                     "Discord User ID : {member.id}\n"
-                     "Gamer Tag : {gamertag}\n"
-                     "Amount : {amount}\n"
-                     "Purchase type : {purchase}\n")
+                     f"Discord User ID : {member}\n"
+                     f"Gamer Tag : {gamertag}\n"
+                     f"Amount : {amount}\n"
+                     f"Purchase type : {purchase}\n")
                 )
         embed.set_footer(text="Fun Plugin v1.0")
 
