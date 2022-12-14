@@ -124,7 +124,8 @@ class FunCommands(commands.Cog):
         elif purchase == obsidian.lower():                 
             purchase = member.guild.get_role(1034474068998631454)
             await member.add_roles(purchase)
-            await member.add_roles(smprank)            embed = discord.Embed(
+            await member.add_roles(smprank)            
+            embed = discord.Embed(
                     description = (f" Successfully added {purchase.mention} to {member.mention} for 30 days\n"
                                   f" Successfully added {smprank.mention} to {member.mention} for 30days\n"))
             await channel.send(embed=embed)
