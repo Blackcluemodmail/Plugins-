@@ -158,7 +158,7 @@ class Autoreact(commands.Cog):
                       "Gamer Tag : {gamertag}\n"
                       "Amount : {amount}\n"
                       "Purchase type : {purchase}\n")
-        await ctx.channel.send(embed=embed)
+        sd = await ctx.channel.send(embed=embed)
                               
         if purchase == amethyst.lower():
                               
