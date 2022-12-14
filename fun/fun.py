@@ -3,6 +3,7 @@ from discord.ext import commands
 from core import checks
 from core.models import PermissionLevel
 import random
+import asyncio
 import time
 
 class FunCommands(commands.Cog):
@@ -107,7 +108,7 @@ class FunCommands(commands.Cog):
                     description = (f" Successfully added {purchase.mention} to {member.mention} for 30 days\n"
                                   f" Successfully added {smprank.mention} to {member.mention} for 30days\n"))
             await channel.send(embed=embed)
-            time.sleep(2592000)
+            await asyncio.sleep(2592000)
             await member.remove_roles(purchase)
             await member.remove_roles(smprank)
         elif purchase == ruby.lower():                 
@@ -118,7 +119,7 @@ class FunCommands(commands.Cog):
                     description = (f" Successfully added {purchase.mention} to {member.mention} for 30 days\n"
                                   f" Successfully added {smprank.mention} to {member.mention} for 30days\n"))
             await channel.send(embed=embed)
-            time.sleep(2592000)
+            await asyncio.sleep(2592000)
             await member.remove_roles(purchase)
             await member.remove_roles(smprank)
         elif purchase == obsidian.lower():                 
@@ -129,7 +130,7 @@ class FunCommands(commands.Cog):
                     description = (f" Successfully added {purchase.mention} to {member.mention} for 30 days\n"
                                   f" Successfully added {smprank.mention} to {member.mention} for 30days\n"))
             await channel.send(embed=embed)
-            time.sleep(2592000)
+            await asyncio.sleep(2592000)
             await member.remove_roles(purchase)
             await member.remove_roles(smprank)            
         elif purchase == epidote.lower():                 
@@ -140,7 +141,7 @@ class FunCommands(commands.Cog):
                     description = (f" Successfully added {purchase.mention} to {member.mention} for 30 days\n"
                                   f" Successfully added {smprank.mention} to {member.mention} for 30days\n"))
             await channel.send(embed=embed)
-            time.sleep(2592000)
+            await asyncio.sleep(2592000)
             await member.remove_roles(purchase)
             await member.remove_roles(smprank)
         elif purchase == carneline.lower():                 
@@ -151,7 +152,7 @@ class FunCommands(commands.Cog):
                     description = (f" Successfully added {purchase.mention} to {member.mention} for 30 days\n"
                                   f" Successfully added {smprank.mention} to {member.mention} for 30days\n"))
             await channel.send(embed=embed)
-            time.sleep(2592000)
+            await asyncio.sleep(2592000)
             await member.remove_roles(purchase)
             await member.remove_roles(smprank)
         elif purchase == amazonite.lower():                 
@@ -162,7 +163,7 @@ class FunCommands(commands.Cog):
                     description = (f" Successfully added {purchase.mention} to {member.mention} for 30 days\n"
                                   f" Successfully added {smprank.mention} to {member.mention} for 30days\n"))
             await channel.send(embed=embed)
-            time.sleep(2592000)
+            await asyncio.sleep(2592000)
             await member.remove_roles(purchase)
             await member.remove_roles(smprank)                  
         else:
@@ -171,5 +172,7 @@ class FunCommands(commands.Cog):
                        f"Couldn’t add roles to the {member.mention} due to incorrect log format!\n"
                        f"Please give them roles manially"))
             await channel.send(embed=embed)
+            
+            
 async def setup(bot):
     await bot.add_cog(FunCommands(bot))
