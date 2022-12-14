@@ -174,7 +174,7 @@ class FunCommands(commands.Cog):
             await channel.send(embed=embed)
             
     @commands.Cog.listener()
-    async def on_message(self, message):
+    async def on_message(self, message, ctx):
         manager = message.guild.get_role(781054364525395979)
         admin = message.guild.get_role(781054661901156372)
         gc = message.guild.get_channel(892689877517365268)
