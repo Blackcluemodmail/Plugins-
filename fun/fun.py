@@ -169,8 +169,8 @@ class FunCommands(commands.Cog):
         else:
             embed = discord.Embed(
                     description = (
-                       f"Couldn’t add roles to the {member.mention} due to incorrect log format!\n"
-                       f"Please give them roles manially"))
+                       f"Couldn’t add roles to {member.mention} due to incorrect log format!\n"
+                       f"Please give them roles manually"))
             await channel.send(embed=embed)
             
 
