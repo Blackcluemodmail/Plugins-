@@ -105,8 +105,9 @@ class FunCommands(commands.Cog):
             await member.add_roles(purchase)
             await member.add_roles(smprank)
             embed = discord.Embed(
-                    description = (f" Successfully added {purchase.mention} to {member.mention} for 30 days\n"
-                                  f" Successfully added {smprank.mention} to {member.mention} for 30days\n"))
+                    description = (f" Successfully added {purchase.mention} to {member.mention} for 30 days\n"))
+            embed2 = discord.Embed(
+                     description = (f" Successfully added {smprank.mention} to {member.mention} for 30days\n"))
             await channel.send(embed=embed)
             await asyncio.sleep(2592000)
             await member.remove_roles(purchase)
